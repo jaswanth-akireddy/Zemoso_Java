@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Assignmet2 {
+public class Assignment2 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the String :");
@@ -16,7 +16,9 @@ public class Assignmet2 {
         s=s.toLowerCase();
         boolean[] alpha=new boolean[26];
         for(char c:s.toCharArray()){
-            alpha[c-'a']=true;
+            if('a'-c>=-25 && 'a'-c <=0){
+                alpha[c-'a']=true;
+            }
         }
         for(boolean b:alpha){
             if(!b)return false;
@@ -24,3 +26,5 @@ public class Assignmet2 {
         return true;
     }
 }
+
+//time complexity - O(n) 

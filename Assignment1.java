@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
 
-public class Assignment1{
+public class Assignment1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String dirPath = "C:\\Users\\jaswa\\OneDrive\\Desktop\\Components";
