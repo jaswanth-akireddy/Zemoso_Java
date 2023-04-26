@@ -53,8 +53,8 @@ class CartItem {
  public class Solid_Violated {
     public static void main(String[] args) {
        ShoppingCart cart = new ShoppingCart();
-       CartItem item1 = new CartItem("iPhone X", 999.99);
-       CartItem item2 = new CartItem("MacBook Pro", 1999.99);
+       CartItem item1 = new CartItem("One Plus 11 r", 39999);
+       CartItem item2 = new CartItem("galaxy book s", 29999999);
        cart.addItem(item1);
        cart.addItem(item2);
        cart.printItems();
