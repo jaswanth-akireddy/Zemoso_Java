@@ -1,4 +1,5 @@
 q1 - 
+ Find out the PG-13 rated comedy movies. DO NOT use the film_list table
 
 SELECT title
 FROM film
@@ -15,6 +16,8 @@ WHERE rating = 'PG-13'
 
 
 q2 -
+Find out the top 3 rented horror movies.
+
 
 SELECT f.title, COUNT(*) AS rental_count
 FROM film f
@@ -29,7 +32,7 @@ LIMIT 3;
 
 
 q3 -
-
+Find out the list of customers from India who have rented sports movies.
 
 SELECT c.first_name, c.last_name
 FROM customer c
@@ -42,7 +45,7 @@ WHERE cat.name = 'Sports'
 
 
 q4 -
-
+Find out the list of customers from Canada who have rented “NICK WAHLBERG” movies
 
 SELECT c.first_name, c.last_name, c.email 
 FROM customer c
@@ -61,7 +64,7 @@ AND a.last_name = 'WAHLBERG';
 
 
 q5 -
-
+Find out the number of movies in which “SEAN WILLIAMS” acted.
 
 SELECT COUNT(*) 
 FROM film f
@@ -71,6 +74,7 @@ WHERE a.first_name = 'SEAN' AND a.last_name = 'WILLIAMS';
 
 
 q6 -
+ Find out the number of documentaries with deleted scenes.
 
 SELECT COUNT(*) 
 FROM film f
@@ -79,6 +83,7 @@ JOIN category c ON fc.category_id = c.category_id
 WHERE c.name = 'Documentary' AND f.special_features LIKE '%Deleted Scenes%';
 
 q7 -
+ Find out the number of sci-fi movies rented by the store managed by Jon Stephens.
 
 SELECT COUNT(*) 
 FROM film f
@@ -91,7 +96,7 @@ WHERE s.first_name = 'Jon' AND s.last_name = 'Stephens' AND c.name = 'Sci-Fi';
 
 
 q8 -
-
+ Find out the total sales from Animation movies.
 
 SELECT SUM(p.amount) 
 FROM payment p
@@ -104,7 +109,7 @@ WHERE c.name = 'Animation';
 
 
 q9 -
-
+Find out the top 3 rented category of movies by “PATRICIA JOHNSON”.
 
 SELECT c.name, COUNT(*) AS rentals_count
 FROM customer cu
@@ -120,7 +125,7 @@ LIMIT 3;
 
 
 q10 -
-
+ Find out the number of R rated movies rented by “SUSAN WILSON”.
 
 SELECT COUNT(*) 
 FROM customer cu
